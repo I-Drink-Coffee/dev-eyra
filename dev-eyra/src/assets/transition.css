@@ -1,0 +1,23 @@
+/* Fade-in and Fade-out animation */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+  
+  /* Slide animation */
+  .slide-enter-active, .slide-leave-active {
+    transition: all 0.5s ease;
+  }
+  
+  .slide-enter {
+    transform: translateX(100%);
+  }
+  
+  .slide-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  

@@ -13,7 +13,7 @@
     data() {
       return {
         email: 'johnangelodeveyra70@gmail.com',
-        phone: '+639292881247',
+        phone: '+63 929 2881 247',
         location: 'Manila, Philippines',
       };
     },

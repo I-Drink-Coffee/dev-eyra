@@ -29,6 +29,11 @@ export default {
         { image: require('../assets/leaves.jpg'), alt: 'Photo 3', size: 'small' },
         { image: require('../assets/leaves2.jpg'), alt: 'Photo 4', size: 'large' },
         { image: require('../assets/leaves3.jpg'), alt: 'Photo 5', size: 'medium' },
+        { image: require('../assets/gdd.jpg'), alt: 'Photo 6', size: 'small' },
+        { image: require('../assets/gd2.jpg'), alt: 'Photo 7', size: 'large' },
+        { image: require('../assets/pink.jpg'), alt: 'Photo 8', size: 'medium' },
+        { image: require('../assets/pink2.jpg'), alt: 'Photo 9', size: 'small' },
+
       ],
     };
   },

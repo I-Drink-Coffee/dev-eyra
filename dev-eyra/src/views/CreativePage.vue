@@ -1,73 +1,69 @@
 <template>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
-          <h1 class="text-center mb-4">Creative Page</h1>
-          
-          <!-- Custom content area -->
-          <div v-if="customContent.length" class="list-group">
-            <div class="list-group-item" v-for="(content, index) in customContent" :key="index">
-              <h4>{{ content.title }}</h4>
-              <p>{{ content.body }}</p>
-            </div>
-          </div>
-  
-          <!-- If no content is added yet -->
-          <div v-else>
-            <p class="text-center">No creative content added yet. Feel free to add your hobbies, blogs, or mini-app here!</p>
-          </div>
-  
-          <!-- Option to add new creative content -->
-          <form @submit.prevent="addContent" class="mt-5">
-            <div class="mb-3">
-              <input v-model="newContent.title" type="text" class="form-control" placeholder="Enter Title" required />
-            </div>
-            <div class="mb-3">
-              <textarea v-model="newContent.body" class="form-control" rows="3" placeholder="Enter Description" required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary w-100">Add Creative Content</button>
-            </div>
-          </form>
-        </div>
-      </div>
+  <div class="creative-page">
+    <h1 class="page-title">Creative Works</h1>
+    <div class="creative-grid">
+      <CreativeCard 
+        v-for="(item, index) in creativeItems" 
+        :key="index" 
+        :title="item.title" 
+        :description="item.description" 
+      />
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        customContent: [], // Store creative content
-        newContent: {
-          title: '',
-          body: '',
+  </div>
+</template>
+
+<script>
+import CreativeCard from '../components/CreativeCard.vue'; // Import CreativeCard component
+
+export default {
+  name: 'CreativePage',
+  components: {
+    CreativeCard,
+  },
+  data() {
+    return {
+      creativeItems: [
+        { 
+          title: 'Photography', 
+          description: 'A personal collection of nature and street photography.' 
         },
-      };
-    },
-    methods: {
-      addContent() {
-        // Push new content into the custom content array
-        this.customContent.push({
-          title: this.newContent.title,
-          body: this.newContent.body,
-        });
-        // Reset the form fields
-        this.newContent.title = '';
-        this.newContent.body = '';
-      },
-    },
-  };
-  </script>
-  
-  <style scoped>
-  /* Additional styles for the creative page */
-  .list-group-item {
-    margin-bottom: 10px;
-  }
-  
-  textarea {
-    resize: none;
-  }
-  </style>
-  
+        { 
+          title: 'Blog', 
+          description: 'Thoughts on design, development, and personal growth.' 
+        },
+        { 
+          title: 'Testimonials', 
+          description: 'What people say about my work and creative pursuits.' 
+        },
+        { 
+          title: 'Mini Apps', 
+          description: 'A collection of small interactive web apps and tools.' 
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped>
+.creative-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for creative content */
+.creative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+</style>

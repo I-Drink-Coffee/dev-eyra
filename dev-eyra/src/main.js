@@ -8,10 +8,13 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap'; // Optional Bootstrap JS
 
-// Import Firebase (important to initialize it before the app mounts)
+// Import global CSS animations for transitions
+import './assets/transition.css'; 
+
+// Import Firebase configuration
 import './firebase'; 
 
-// Create and mount the Vue app
+// Create and mount the Vue app with router
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
