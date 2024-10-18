@@ -1,33 +1,32 @@
 <template>
-    <div class="container">
-      <div class="row">
-        <div v-for="project in projects" :key="project.id" class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img :src="project.image" class="card-img-top" alt="Project Image" />
-            <div class="card-body">
-              <h5 class="card-title">{{ project.title }}</h5>
-              <p class="card-text">{{ project.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        projects: [
-          { id: 1, title: 'Project 1', description: 'Description of project 1', image: 'project1.jpg' },
-          { id: 2, title: 'Project 2', description: 'Description of project 2', image: 'project2.jpg' },
-        ],
-      };
-    },
-  };
-  </script>
-  
-  <style scoped>
-  /* Add any additional custom styles here */
-  </style>
-  
+  <div class="portfolio-showcase">
+    <h1>My Portfolio</h1>
+    <ShowcaseGrid />
+  </div>
+</template>
+
+<script>
+import ShowcaseGrid from '../components/ShowcaseGrid.vue';
+
+export default {
+  name: 'PortfolioShowcase',
+  components: {
+    ShowcaseGrid,
+  },
+};
+</script>
+
+<style scoped>
+.portfolio-showcase {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+</style>
