@@ -4,7 +4,7 @@
     <div class="contact-details">
       <div class="contact-item">
         <i class="fas fa-envelope contact-icon"></i>
-        <span>Email: <a href="johnangelodeveyra70@gmail.com">youremail@example.com</a></span>
+        <span>Email: <a href="johnangelodeveyra70@gmail.com">johnangelodeveyra70@gmail.com</a></span>
       </div>
       <div class="contact-item">
         <i class="fas fa-phone contact-icon"></i>
