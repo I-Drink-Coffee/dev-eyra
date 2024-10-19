@@ -25,7 +25,7 @@ export default {
     return {
       profileImage: require('../assets/jolo.jpg'), // Load the profile image
       name: 'John Angelo De Veyra',
-      bio: 'A computer engineer specializing in data science and mobile development.',
+      bio: 'I am a software developer specializing in web and application development, showcasing a diverse range of projects that demonstrate my technical abilities and problem-solving skills. This portfolio highlights key projects—from interactive web applications to practical solutions—each illustrating my expertise with technologies like JavaScript, Vue.js, and Python.',
     };
   },
 };
