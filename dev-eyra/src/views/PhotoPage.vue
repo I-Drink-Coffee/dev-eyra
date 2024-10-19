@@ -24,15 +24,22 @@ export default {
   data() {
     return {
       photos: [
-        { image: require('../assets/pie.jpg'), alt: 'Photo 1', size: 'large' },
-        { image: require('../assets/burger.jpg'), alt: 'Photo 2', size: 'medium' },
+        { image: require('../assets/coffee.jpg'), alt: 'Photo 1', size: 'large' },
+        { image: require('../assets/tree.jpg'), alt: 'Photo 2', size: 'medium' },
         { image: require('../assets/leaves.jpg'), alt: 'Photo 3', size: 'small' },
         { image: require('../assets/leaves2.jpg'), alt: 'Photo 4', size: 'large' },
-        { image: require('../assets/leaves3.jpg'), alt: 'Photo 5', size: 'medium' },
-        { image: require('../assets/gdd.jpg'), alt: 'Photo 6', size: 'small' },
-        { image: require('../assets/gd2.jpg'), alt: 'Photo 7', size: 'large' },
+        { image: require('../assets/flower.jpg'), alt: 'Photo 5', size: 'medium' },
+        { image: require('../assets/flow.jpg'), alt: 'Photo 6', size: 'small' },
+        { image: require('../assets/barkooo.png'), alt: 'Photo 7', size: 'large' },
+
         { image: require('../assets/pink.jpg'), alt: 'Photo 8', size: 'medium' },
         { image: require('../assets/pink2.jpg'), alt: 'Photo 9', size: 'small' },
+        { image: require('../assets/parol.jpg'), alt: 'Photo 10', size: 'large' },
+        { image: require('../assets/coco.jpg'), alt: 'Photo 11', size: 'small' },
+
+        { image: require('../assets/church.jpg'), alt: 'Photo 12', size: 'medium' },
+        { image: require('../assets/beach.jpg'), alt: 'Photo 13', size: 'small' },
+
 
       ],
     };
